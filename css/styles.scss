@@ -30,15 +30,31 @@ body {
     font-size: 1.5rem;
     box-shadow: inset 0 -0.5em rgba(0, 0, 0, 0.3);
     border-width: 0;
+
+    &:active {
+        background-color: #3a9ef5;
+        box-shadow: inset 0 0.5em rgba(0, 0, 0, 0.3);
+        transform: translateY(0.25em);
+    }
+
+    &:hover {
+        background-color: #3a9ef5;
+    }
 }
 
-#plus-1-button:active {
-    background-color: #3a9ef5;
-    box-shadow: inset 0 0.5em rgba(0, 0, 0, 0.3);
-    transform: translateY(0.25em);
+.oscar{
+    width: 50%;
+    &:hover {
+        animation: spin 1s linear infinite;
+    }
 }
 
-#plus-1-button:hover {
-    background-color: #3a9ef5;
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 
 }
